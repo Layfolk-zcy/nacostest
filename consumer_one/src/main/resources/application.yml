@@ -1,0 +1,12 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: consumer_one
+    #  kafka:
+    #    bootstrap-servers:
+    #      - localhost:9092
+    #consumer_one: # 服务名称 Service-ID
+    #ribbon:
+    #NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+    #NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RoundRobinRule

@@ -1,0 +1,134 @@
+server:
+  port: 8009
+eureka:
+  # 自定义应用服务在eureka中的实例名称
+  instance:
+    # eureka中的应用服务实例名称定义(配置后Eureka Server处显示,不配置显示默认注册名)
+    instance-id: ${spring.application.name}:${server.port}
+    ip-address: 127.0.0.1
+    # 访问路径可以显示IP地址
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8083/eureka/
+spring:
+  application:
+    name: GATEWAYSERVICE #服务名
+    logyname: SUNYARD
+    appname: SUNGRID
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          #是否与服务发现组件进行结合，通过 serviceId(必须设置成大写) 转发到具体的服务实例。默认为false
+          # 结合服务发现时需要到eureka上拉取信息，所以配置eureka时该服务需要拉取信息
+          enabled: true
+          # 在进行服务发现时将服务的名称忽略大小写问题
+          lower-case-service-id: true
+      routes:
+        - id: websocket-providers
+          uri: lb:ws://PROVIDERS
+          predicates:
+            - Path=/websockets/provider/**
+          filters:
+            - StripPrefix=1
+        # websocket 路由
+        - id: websocket-consumer
+          uri: lb:ws://PROVIDER-CONSUMER
+          predicates:
+            - Path=/web/websocket/**
+          filters:
+            - StripPrefix=1
+        # 透传服务
+        - id: gateway-client #设置路由id(理论上是可以随便写的)
+          # 定义服务名称时不要使用 _ 符号 gateway无法解析将会导致无法获取到服务ip
+          uri: lb://PROVIDER-CONSUMER #设置路由的url lb://nacos服务注册名称
+          #uri: http://127.0.0.1:8086
+          predicates:
+            #路径匹配规则 当访问http://localhost:8001/consumer/test时路由配对规则成功，
+            - Path=/consumer/**
+          filters:
+            # 匹配到路径后去掉第一节，在路由到目标服务
+            - StripPrefix=1
+        - id: provider-client
+          uri: lb://PROVIDERS
+          predicates:
+            - Path=/provider/**
+          filters:
+            - StripPrefix=1
+  #    nacos:
+  #      discovery:
+  #        server-addr: 127.0.0.1:8848 #配置Nacos的服务地址
+  kafka:
+    #bootstrap-servers: 172.16.15.100:9092
+    #bootstrap-servers: 192.168.1.130:9092
+    #bootstrap-servers: 172.1.11.100:9092
+    bootstrap-servers: 172.1.10.100:9092
+    #bootstrap-servers: 172.1.1.75:9092
+
+  #链路配置
+  zipkin:
+    base-url: http://127.0.0.1:9411
+    #base-url: http://172.1.1.75:9411
+    #  kafka:
+    #    bootstrap-servers: 192.168.1.130:9092
+    #    #链路配置
+    #  zipkin:
+    #    base-url: http://127.0.0.1:9411
+    discovery-client-enabled: true
+    # 指定传输类型
+    sender:
+      type: kafka
+  #链路采样
+  sleuth:
+    #reactor:
+    #在2020.0.0中，已将默认网关反应器检测模式更改为manual,
+    #ON_EACH-用跟踪表示形式包装每个Reactor运算符。在大多数情况下，传递跟踪上下文。此模式可能会导致性能急剧下降。
+    #ON_LAST-将最后一个Reactor运算符包装在跟踪表示中。在某些情况下传递跟踪上下文，
+    #因此访问MDC上下文可能不起作用。此模式可能会导致中等性能下降。
+    #MANUAL-以最小侵入性的方式包装每个Reactor，而无需通过跟踪上下文。由用户决定
+    #instrumentation-type: manual
+    sampler:
+      #sleuth采样率，默认为0.1，值越大收集越及时，但性能影响也越大
+      probability: 1.0
+    web:
+      #跳过追踪
+      additional-skip-pattern: /auth/druid.*|.*.ico|.*.login
+#  #kafka地址配置
+#  kafka:
+#    bootstrap-servers: 172.1.1.75:9092
+#    #设置日志所属应用 便于日后日志查询条件筛选
+#    log:
+#      app: sunyard
+#      index: SunGrid
+#zipkin:
+#  storage:
+#    type: elasticsearch
+#    elasticsearch:
+#      hosts: http://172.1.1.75:9200
+#      cluster: elasticsearch
+#      index: zipkin
+#      max-requests: 64 #
+#      index-shards: 1   # 分片
+#      index-replicas: 0  # 副本
+#  #主要负责收集外部系统跟踪信息，转化为Zipkin内部的Span格式
+#  collector:
+#    kafka:
+#      bootstrap-servers: 172.1.1.75:9092
+#      zookeeper: 172.1.1.75:2181
+#      topic: zipkin
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: '*'
+#  endpoint:
+#    health:
+#      show-details: always
+#  # js cs报错
+#  metrics:
+#    web:
+#      server:
+#        auto-time-requests: false

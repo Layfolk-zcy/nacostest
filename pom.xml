@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.example</groupId>
+    <artifactId>erukeribbon</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>eureka_service</module>
+        <module>config_service</module>
+        <module>consumer_one</module>
+        <module>provider_consumer_two</module>
+        <module>provider_one</module>
+        <module>provider_four</module>
+        <module>server_nacos</module>
+        <module>gateway_server</module>
+        <module>schedule_test</module>
+        <module>provider_consumer_four</module>
+    </modules>
+    <packaging>pom</packaging>
+
+    <!--<parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.6.3</version>
+        &lt;!&ndash;<version> 2.3.12.RELEASE</version>&ndash;&gt;
+        <relativePath/> &lt;!&ndash; lookup parent from repository &ndash;&gt;
+    </parent>-->
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <junit.version>4.11</junit.version>
+        <cloud-alibaba.version>2.2.7.RELEASE</cloud-alibaba.version>
+        <cloud.version>Hoxton.SR8</cloud.version>
+        <lombok.version>1.18.12</lombok.version>
+        <spring-boot.version>2.5.5</spring-boot.version>
+        <fastjson-version>1.2.73</fastjson-version>
+        <org.mapstruct.version>1.3.0.Final</org.mapstruct.version>
+        <mybatis-plus.version>3.3.2</mybatis-plus.version>
+        <spring-boot-starter-cache-version>2.3.2.RELEASE</spring-boot-starter-cache-version>
+        <mysql-connector-java.version>8.0.11</mysql-connector-java.version>
+        <druid-spring-boot-starter.version>1.1.10</druid-spring-boot-starter.version>
+        <spring-data-elasticsearch.version>4.0.4.RELEASE</spring-data-elasticsearch.version>
+        <hibernate-validator.version>6.1.6.Final</hibernate-validator.version>
+        <commons-pool2.version>2.8.0</commons-pool2.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <mybatis-plus.gen.version>3.4.1</mybatis-plus.gen.version>
+        <quartz.version>2.1.9.RELEASE</quartz.version>
+        <slueth.zipkin.version>3.1.1</slueth.zipkin.version>
+        <spring-data-elasticsearch.version>3.2.5.RELEASE</spring-data-elasticsearch.version>
+        <java.version>8</java.version>
+        <commons-collections4.version>4.4</commons-collections4.version>
+        <fastjson.version>1.2.62</fastjson.version>
+        <commons-lang3.version>3.7</commons-lang3.version>
+        <httpcomponents.version>4.5.5</httpcomponents.version>
+        <druid-starter.version>1.1.21</druid-starter.version>
+        <redisson.version>3.9.1</redisson.version>
+        <jedis.version>2.9.0</jedis.version>
+        <hutool.version>5.1.4</hutool.version>
+        <poi.version>4.1.1</poi.version>
+        <zipkin.version>2.12.9</zipkin.version>
+        <commons-beanutils.version>1.9.4</commons-beanutils.version>
+        <commons-io.version>2.6</commons-io.version>
+        <servlet-api.version>4.0.1</servlet-api.version>
+        <slf4j-nop.version>1.7.2</slf4j-nop.version>
+
+        <!--sungrid1.3-->
+        <!--<spring-cloud-alibaba-dependencies.version>2.0.4.RELEASE</spring-cloud-alibaba-dependencies.version>
+        <spring-boot-dependencies.version>2.0.9.RELEASE</spring-boot-dependencies.version>
+        <spring-cloud-dependencies.version>Finchley.SR3</spring-cloud-dependencies.version>-->
+
+        <!--sungrid 1.0-->
+        <!--<spring-cloud-alibaba-dependencies.version>2.2.7.RELEASE</spring-cloud-alibaba-dependencies.version>
+        <spring-boot-dependencies.version>2.3.12.RELEASE</spring-boot-dependencies.version>
+        <spring-cloud-dependencies.version>Hoxton.SR12</spring-cloud-dependencies.version>-->
+
+        <!--sungrid2.0-->
+        <spring-boot-dependencies.version>2.6.3</spring-boot-dependencies.version>
+        <spring-cloud-dependencies.version>2021.0.1</spring-cloud-dependencies.version>
+        <spring-cloud-alibaba-dependencies.version>2021.0.1.0</spring-cloud-alibaba-dependencies.version>
+
+
+        <com.google.code.gson.version>2.6.2</com.google.code.gson.version>
+        <zipkin.collector.kafka.version>2.12.3</zipkin.collector.kafka.version>
+        <spring-boot-admin-client.version>2.0.6</spring-boot-admin-client.version>
+        <elasticsearch-rest-client.version>5.6.12</elasticsearch-rest-client.version>
+        <elasticsearch-rest-high-level-client.version>5.6.12</elasticsearch-rest-high-level-client.version>
+        <logstash-logback-encoder.version>5.0</logstash-logback-encoder.version>
+        <logback-classic.version>1.2.3</logback-classic.version>
+        <springfox-swagger2.version>2.9.2</springfox-swagger2.version>
+        <springfox-swagger-ui.version>2.9.2</springfox-swagger-ui.version>
+        <com.google.guava.version>26.0-jre</com.google.guava.version>
+        <swagger-models.version>1.5.24</swagger-models.version>
+        <swagger-annotations.version>1.5.24</swagger-annotations.version>
+        <org.quartz-scheduler.version>2.3.1</org.quartz-scheduler.version>
+        <org.bouncycastle.bcprov-jdk15on.version>1.60</org.bouncycastle.bcprov-jdk15on.version>
+        <zipkin.es.version>2.8.4</zipkin.es.version>
+        <spring.cloud.zipkin.slueth>2.2.8.RELEASE</spring.cloud.zipkin.slueth>
+        <gateway.version>2.2.6.RELEASE</gateway.version>
+        <boot.quartz>2.3.12.RELEASE</boot.quartz>
+        <maven.plugin.version>2.3.12.RELEASE</maven.plugin.version>
+
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- cloud-alibaba全家桶-->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring-cloud-alibaba-dependencies.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- cloud全家桶-->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud-dependencies.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- springBoot全家桶-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot-dependencies.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- web启动器-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>${spring-boot-dependencies.version}</version>
+            </dependency>
+
+            <!--开启springboot缓存支持-->
+            <!--<dependency>
+              <groupId>org.springframework.boot</groupId>
+              <artifactId>spring-boot-starter-cache</artifactId>
+              <version>${spring-boot.version}</version>
+            </dependency>-->
+
+            <!--添加redis缓存组件-->
+            <!--<dependency>
+              <groupId>org.springframework.boot</groupId>
+              <artifactId>spring-boot-starter-data-redis-reactive</artifactId>
+              <version>${spring-boot.version}</version>
+            </dependency>-->
+
+            <!--Apache下一个开源的公共资源池-->
+            <!--<dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-pool2</artifactId>
+                <version>${commons-pool2.version}</version>
+            </dependency>-->
+
+            <!-- AlibabaJson工具类-->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson-version}</version>
+            </dependency>
+
+            <!-- mapstruct 映射bean的工具-->
+            <!--<dependency>
+              <groupId>org.mapstruct</groupId>
+              <artifactId>mapstruct-jdk8</artifactId>
+              <version>${org.mapstruct.version}</version>
+            </dependency>
+            <dependency>
+              <groupId>org.mapstruct</groupId>
+              <artifactId>mapstruct-processor</artifactId>
+              <version>${org.mapstruct.version}</version>
+            </dependency>
+            <dependency>
+              <groupId>org.mapstruct</groupId>
+              <artifactId>mapstruct</artifactId>
+              <version>${org.mapstruct.version}</version>
+            </dependency>-->
+
+            <!-- mybatis Plus 插件
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-extension</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-generator</artifactId>
+                <version>${mybatis-plus.gen.version}</version>
+            </dependency>-->
+
+            <!-- rsa开始 -->
+            <!--<dependency>
+              <groupId>org.bouncycastle</groupId>
+              <artifactId>bcprov-jdk16</artifactId>
+              <version>1.46</version>
+            </dependency>
+            <dependency>
+              <groupId>commons-codec</groupId>
+              <artifactId>commons-codec</artifactId>
+              <version>1.10</version>
+            </dependency>-->
+            <!-- rsa结束 -->
+
+            <!--alibaba服务监控组件-->
+            <!--<dependency>
+              <groupId>com.alibaba.cloud</groupId>
+              <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+              <version>2.1.0.RELEASE</version>
+            </dependency>-->
+
+            <!--mysql连接驱动-->
+            <!--<dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql-connector-java.version}</version>
+            </dependency>-->
+
+            <!--druid数据监控-->
+            <!--<dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${druid-spring-boot-starter.version}</version>
+            </dependency>-->
+
+            <!-- es依赖 -->
+            <!--<dependency>
+              <groupId>org.springframework.data</groupId>
+              <artifactId>spring-data-elasticsearch</artifactId>
+              <version>${spring-data-elasticsearch.version}</version>
+            </dependency>
+            <dependency>
+              <groupId>org.hibernate.validator</groupId>
+              <artifactId>hibernate-validator</artifactId>
+              <version>${hibernate-validator.version}</version>
+            </dependency>-->
+
+            <!--<dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
+            </dependency>-->
+
+            <!--Lombok是一个Java库，能自动插入编辑器并构建工具，简化Java开发。通过添加注解的方式，不需要为类编写getter或eques方法，同时可以自动化日志变量。-->
+            <!-- <dependency>
+                 <groupId>org.projectlombok</groupId>
+                 <artifactId>lombok</artifactId>
+                 <version>${lombok.version}</version>
+             </dependency>-->
+
+            <!-- springboot单元测试框架 -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-test</artifactId>
+                <version>${spring-boot.version}</version>
+            </dependency>
+
+
+            <!--微服务通信框架feign-->
+            <!--<dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-openfeign</artifactId>
+            </dependency>-->
+
+            <!--<dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-quartz</artifactId>
+                <version>${boot.quartz}</version>
+            </dependency>-->
+            <!--Zipkin收集 Sleuth 产生的数据，并以界面的形式呈现出来 包含springCloud项目需要的slueth
+            包含zipkin Server所需要的依赖配置-->
+            <!--<dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-zipkin</artifactId>
+                <version>${spring.cloud.zipkin.slueth}</version>
+            </dependency>-->
+            <!-- zipkin server-->
+            <!--dependency>
+                <groupId>io.zipkin.java</groupId>
+                <artifactId>zipkin-server</artifactId>
+                <version>${zipkin.version}</version>
+                &lt;!&ndash;排除日志，否则报错&ndash;&gt;
+                <exclusions>
+                    <exclusion>
+                        <artifactId>log4j-slf4j-impl</artifactId>
+                        <groupId>org.apache.logging.log4j</groupId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            &lt;!&ndash;zipkin 界面&ndash;&gt;
+           <dependency>
+               <groupId>io.zipkin.java</groupId>
+               <artifactId>zipkin-autoconfigure-ui</artifactId>
+               <version>${zipkin.version}</version>
+           </dependency>-->
+            <!-- zipkin 存储到数据库需要引入此类 -->
+            <!--<dependency>
+                <groupId>io.zipkin.java</groupId>
+                <artifactId>zipkin-autoconfigure-storage-mysql</artifactId>
+            </dependency>-->
+            <!--zipkin存储es-->
+            <dependency>
+                <groupId>io.zipkin.java</groupId>
+                <artifactId>zipkin-autoconfigure-storage-elasticsearch-http</artifactId>
+                <version>${zipkin.es.version}</version>
+                <optional>true</optional>
+            </dependency>
+            <!--zipkin数据使用kafka收集-->
+            <dependency>
+                <groupId>io.zipkin.java</groupId>
+                <artifactId>zipkin-autoconfigure-collector-kafka</artifactId>
+                <version>${zipkin.collector.kafka.version}</version>
+            </dependency>
+            <!--zipkin server-->
+
+            <!-- springboot zipkin client-->
+            <!--<dependency>
+                <groupId>io.zipkin.brave</groupId>
+                <artifactId>brave-core</artifactId>
+                <version>3.10.0</version>
+            </dependency>
+            <dependency>
+                <groupId>io.zipkin.brave</groupId>
+                <artifactId>brave-spancollector-http</artifactId>
+                <version>3.10.0</version>
+            </dependency>
+            <dependency>
+                <groupId>io.zipkin.brave</groupId>
+                <artifactId>brave-web-servlet-filter</artifactId>
+                <version>3.10.0</version>
+            </dependency>
+            <dependency>
+                <groupId>io.zipkin.brave</groupId>
+                <artifactId>brave-okhttp</artifactId>
+                <version>3.10.0</version>
+            </dependency>-->
+            <!-- zipkin-->
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <!--feign core-->
+        <dependency>
+            <groupId>io.github.openfeign</groupId>
+            <artifactId>feign-core</artifactId>
+        </dependency>
+    </dependencies>
+
+    <!--<build>
+        <finalName>ribbon_dynamic_config</finalName>
+        <pluginManagement>&lt;!&ndash; lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) &ndash;&gt;
+            <plugins>
+                <plugin>
+                    <artifactId>maven-clean-plugin</artifactId>
+                    <version>3.1.0</version>
+                </plugin>
+                &lt;!&ndash; see http://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_war_packaging &ndash;&gt;
+                <plugin>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>3.0.2</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.8.0</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>2.22.1</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-war-plugin</artifactId>
+                    <version>3.2.2</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-install-plugin</artifactId>
+                    <version>2.5.2</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-deploy-plugin</artifactId>
+                    <version>2.8.2</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>-->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${maven.plugin.version}</version>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

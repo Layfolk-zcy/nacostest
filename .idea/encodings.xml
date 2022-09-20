@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/../../../BaiduNetdiskDownload/zipkin-2.23.16/zipkin-2.23.16/zipkin-collector/activemq/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../../BaiduNetdiskDownload/zipkin-2.23.16/zipkin-2.23.16/zipkin-collector/core/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../../BaiduNetdiskDownload/zipkin-2.23.16/zipkin-2.23.16/zipkin-collector/kafka/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../../BaiduNetdiskDownload/zipkin-2.23.16/zipkin-2.23.16/zipkin-collector/rabbitmq/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../../BaiduNetdiskDownload/zipkin-2.23.16/zipkin-2.23.16/zipkin-collector/scribe/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../../BaiduNetdiskDownload/zipkin-2.23.16/zipkin-2.23.16/zipkin-storage/cassandra/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../../BaiduNetdiskDownload/zipkin-2.23.16/zipkin-2.23.16/zipkin-storage/cassandra/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../../BaiduNetdiskDownload/zipkin-2.23.16/zipkin-2.23.16/zipkin-storage/elasticsearch/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../../BaiduNetdiskDownload/zipkin-2.23.16/zipkin-2.23.16/zipkin-storage/mysql-v1/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../../BaiduNetdiskDownload/zipkin-2.23.16/zipkin-2.23.16/zipkin-storage/mysql-v1/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/config_service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/config_service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consumer_one/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consumer_one/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka_service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka_service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gateway_server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gateway_server/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/provider_consumer_four/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/provider_consumer_four/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/provider_consumer_two/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/provider_consumer_two/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/provider_four/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/provider_four/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/provider_one/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/provider_one/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/schedule_test/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/schedule_test/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server_nacos/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server_nacos/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../springboot2021.0.1/es/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../springboot2021.0.1/es/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../springboot2021.0.1/nexus/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../zipkin_component" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../zipkin_component/zipkin-collector/activemq/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../zipkin_component/zipkin-collector/core/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../zipkin_component/zipkin-collector/kafka/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../zipkin_component/zipkin-collector/rabbitmq/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../zipkin_component/zipkin-collector/scribe/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../zipkin_component/zipkin-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../zipkin_component/zipkin-server/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../zipkin_component/zipkin-storage/elasticsearch/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../zipkin_component/zipkin/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../zipkin_parent/spark_server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../zipkin_parent/spark_server/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../zipkin_parent/zipkin_server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../zipkin_parent/zipkin_server/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

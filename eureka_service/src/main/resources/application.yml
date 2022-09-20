@@ -1,0 +1,45 @@
+server:
+  port: 8083
+eureka:
+  # 自定义应用服务在eureka中的实例名称
+  instance:
+    # eureka中的应用服务实例名称定义(配置后Eureka Server处显示,不配置显示默认注册名)
+    instance-id: ${spring.application.name}:${server.port}
+    # 访问路径可以显示IP地址
+    prefer-ip-address: true
+    # 设置hostname名称，在构架eureka应用服务的实例名称时将会使用, hostname:applicationName:port
+    # hostname: localhost
+  client:
+    registerWithEureka: true # 单点的时候设置为 false 禁止注册自身
+    fetchRegistry: true # 单点的时候设置为不拉取服务注册列表数据
+    serviceUrl:
+      # eureka服务端集群时使用参数，服务端与服务端之间相互发现与注册
+      #（eureka注册中心需要覆盖默认的eureka注册中心地址默认端口8671，客户端使用该defaultZone值进行服务端的服务注册）
+      defaultZone: http://127.0.0.1:8083/eureka/ # web页面访问 http://localhost:8083
+    #server:
+    #evictionIntervalTimerInMs: 4000 # 将服务从注册列表中移除等待时间(服务未响应时)
+    #enableSelfPreservation: false # 是否开启自我包含机制
+spring:
+  application:
+    name: eureka-center
+    logyname: SUNYARD
+    appname: SUNGRID
+  kafka:
+    #bootstrap-servers: 172.16.15.100:9092
+    #bootstrap-servers: 192.168.1.130:9092
+    bootstrap-servers: 172.1.10.100:9092
+  zipkin:
+    base-url: http://127.0.0.1:9411
+    discovery-client-enabled: true
+    # 指定传输类型
+    sender:
+      type: kafka
+  sleuth:
+    sampler:
+      #sleuth采样率，默认为0.1，值越大收集越及时，但性能影响也越大
+      probability: 1.0
+    web:
+      #跳过追踪
+      additional-skip-pattern: /auth/druid.*|.*.ico|.*.login
+
+

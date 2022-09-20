@@ -1,0 +1,41 @@
+spring:
+  rabbitmq:
+    host: localhost
+    password: guest
+    username: guest
+    #port: 15672
+  cloud:
+    config:
+      # 配置中心服务端地址
+      uri: http://config-center-server/
+      label: master
+      # 当前配置的profile的值 那个运行环境
+      #profile:
+      #fail-fast: true
+      discovery:
+        #通过服务名到注册发现获取到配置中心服务对应的Ip
+        #(访问方式http://config-server-ip:port/application-name/profile/label)label标识git上的分支
+        service-id: config-center-server
+        #开启服务注册发现
+        enabled: true
+        #username: user
+        #password: 123456
+        # git上的配置文件名称
+      name: config-center-server
+    # 开启消息追踪
+#    bus:
+#      trace:
+#        enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        #include: refresh
+        #include: '*'
+        # 该值可以请求http://localhost:8082/actuator地址查看是暴露那个刷新值，该请求未post请求
+        include: 'bus-refresh'
+    enabled-by-default: true
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8083/eureka/

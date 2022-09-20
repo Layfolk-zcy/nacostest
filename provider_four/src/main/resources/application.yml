@@ -1,0 +1,59 @@
+server:
+  port: 8086
+app:
+  hostname: providetwo
+spring:
+  # 指定zipkin的收集器kafka的服务地址 当前为单例服务
+  #    consumer:
+  #      group-id: zipkin
+  #    template:
+  #      default-topic: zipkin
+  kafka:
+    #bootstrap-servers: 172.16.15.100:9092
+    bootstrap-servers: 192.168.1.130:9092
+    #bootstrap-servers: 172.1.11.100:9092
+    #bootstrap-servers: 172.1.1.75:9092
+  #  zipkin:
+  #    base-url: http://172.16.15.100:9411
+  #  kafka:
+  #    bootstrap-servers: 192.168.1.130:9092
+  #  #链路配置
+  zipkin:
+    #base-url: http://172.1.1.75:9411
+    base-url: http://127.0.0.1:9411
+    # 关闭服务发现，否则Spring Cloud会把zipkin的url当做服务名称 true表示开启服务发现
+    discoveryClientEnabled: false
+    sender:
+      type: kafka
+  sleuth:
+    sampler:
+      probability: 1.0
+  application:
+    name: providers
+    logyname: SUNYARD
+    appname: SUNGRID
+
+  #zipkin服务所在地址
+#  zipkin:
+#    base-url: http://localhost:9411/
+#    discovery-client-enabled: true
+#  #配置采样百分比,开发环境可以设置为1，表示全部，生产就用默认
+#  sleuth:
+#    sampler:
+#      probability: 1
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name:127.0.0.1}:${server.port}
+    ip-address: ${spring.application.name:127.0.0.1}
+    hostname: ${spring.application.name:127.0.0.1}
+  client:
+    registerWithEureka: true # 单点的时候设置为 false 禁止注册自身
+    fetchRegistry: true # 单点的时候设置为不拉取服务注册列表数据
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8083/eureka/
+#  cloud:
+#    nacos:
+#      discovery:
+#        server-addr: 127.0.0.1:8848 #配置Nacos的服务地址
+

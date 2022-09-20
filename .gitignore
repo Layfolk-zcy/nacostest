@@ -1,0 +1,11 @@
+# Project exclude paths
+/config_service/target/
+/consumer_one/target/
+/eureka_service/target/
+/gateway_server/target/
+/provider_consumer_four/target/
+/provider_consumer_two/target/
+/provider_four/target/
+/provider_one/target/
+/schedule_test/target/
+/server_nacos/target/

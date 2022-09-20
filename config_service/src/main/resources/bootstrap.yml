@@ -1,0 +1,43 @@
+# MQ相关配置，暴露bus刷新端点
+#management:
+#endpoints:
+#enabled-by-default: true
+#web:
+#exposure:
+#include: 'bus-refresh'
+#include: '*'
+#spring:
+#  kafka:
+#    #服务地址
+#    bootstrap-servers: 192.168.34:9092
+#    consumer:
+#      group-id: test
+#    template:
+#      default-topic: test
+
+#spring:
+#  cloud:
+#    stream:
+#      kafka:
+#        binder:
+#          zk-nodes: 192.168.34:2181
+#          brokers: 192.168.34:9092
+spring:
+  application:
+    name: config-center-server
+  cloud:
+    #spring cloud config配置
+    config:
+      server:
+        git:
+          #配置git仓库位置
+          uri: https://gitee.com/Layfolk-zcy/cloud2020.git/
+          #配置仓库路径下的相对搜索位置，可以配置多个,多个之间用逗号分隔
+          #(创建时yml或者properties名称需要与项目名称相同) 默认情况下在在 / 目录下查询
+          #search-paths: /
+          #访问git仓库的用户名
+          username: 13647901326
+          #访问git仓库的用户密码
+          password: zcy%19980627
+          # git分支
+          default-label: master

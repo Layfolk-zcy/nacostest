@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="zipkin_server" />
+        <module name="nexus" />
+        <module name="eureka_service" />
+        <module name="server_nacos" />
+        <module name="skywalking-provider-two" />
+        <module name="skywalking-provider" />
+        <module name="zipkinspringcloud" />
+        <module name="provider_consumer_two" />
+        <module name="es" />
+        <module name="nacos-intergrate" />
+        <module name="provider_one" />
+        <module name="gateway_server" />
+        <module name="skywalking-gateway" />
+        <module name="skywalking-eureka" />
+        <module name="provider_four" />
+        <module name="provider_consumer_four" />
+        <module name="skywalking-consumer" />
+        <module name="consumer_one" />
+        <module name="schedule_test" />
+        <module name="config_service" />
+        <module name="spark_server" />
+        <module name="gateway" />
+        <module name="feignclient" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="nacos_service" target="1.8" />
+      <module name="provider_consumer_three" target="1.8" />
+      <module name="quartz" target="1.8" />
+      <module name="quartz_service" target="1.8" />
+      <module name="slueth_zipkin_springcloud" target="1.8" />
+      <module name="zipkin" target="1.8" />
+      <module name="zipkin-collector" target="1.8" />
+      <module name="zipkin-collector (1)" target="1.8" />
+      <module name="zipkin-collector (2)" target="1.8" />
+      <module name="zipkin-collector-activemq" target="1.8" />
+      <module name="zipkin-collector-activemq (1)" target="1.8" />
+      <module name="zipkin-collector-activemq (2)" target="1.8" />
+      <module name="zipkin-collector-kafka" target="1.8" />
+      <module name="zipkin-collector-kafka (1)" target="1.8" />
+      <module name="zipkin-collector-kafka (2)" target="1.8" />
+      <module name="zipkin-collector-parent" target="1.8" />
+      <module name="zipkin-collector-parent (2)" target="1.8" />
+      <module name="zipkin-collector-rabbitmq" target="1.8" />
+      <module name="zipkin-collector-rabbitmq (1)" target="1.8" />
+      <module name="zipkin-collector-rabbitmq (2)" target="1.8" />
+      <module name="zipkin-collector-scribe" target="1.8" />
+      <module name="zipkin-collector-scribe (1)" target="1.8" />
+      <module name="zipkin-collector-scribe (2)" target="1.8" />
+      <module name="zipkin-server" target="1.8" />
+      <module name="zipkin-server (1)" target="1.8" />
+      <module name="zipkin-storage-cassandra" target="1.8" />
+      <module name="zipkin-storage-cassandra (1) (io.zipkin.zipkin2)" target="1.8" />
+      <module name="zipkin-storage-elasticsearch" target="1.8" />
+      <module name="zipkin-storage-elasticsearch (1)" target="1.8" />
+      <module name="zipkin-storage-elasticsearch (1) (io.zipkin.zipkin2)" target="1.8" />
+      <module name="zipkin-storage-elasticsearch (2)" target="1.8" />
+      <module name="zipkin-storage-mysql-v1" target="1.8" />
+      <module name="zipkin-storage-mysql-v1 (1) (io.zipkin.zipkin2)" target="1.8" />
+      <module name="zipkin-storage-parent" target="1.8" />
+      <module name="zipkin-storage-parent (2)" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="config_service" options="" />
+      <module name="consumer_one" options="" />
+      <module name="eureka_service" options="" />
+      <module name="gateway_server" options="" />
+      <module name="nacos_service" options="-parameters" />
+      <module name="nexus" options="-parameters" />
+      <module name="provider_consumer_three" options="-parameters" />
+      <module name="provider_consumer_two" options="" />
+      <module name="provider_four" options="" />
+      <module name="provider_one" options="" />
+      <module name="quartz" options="-parameters" />
+      <module name="quartz_service" options="-parameters" />
+      <module name="schedule_test" options="" />
+      <module name="server_nacos" options="" />
+      <module name="slueth_zipkin_springcloud" options="-parameters" />
+      <module name="spark_server" options="-parameters" />
+      <module name="zipkin" options="" />
+      <module name="zipkin-collector" options="-parameters" />
+      <module name="zipkin-collector-kafka" options="-parameters" />
+      <module name="zipkin-collector-scribe" options="-parameters" />
+      <module name="zipkin-server" options="" />
+      <module name="zipkin-storage-elasticsearch" options="-parameters" />
+      <module name="zipkin_component" options="" />
+      <module name="zipkin_parent" options="-parameters" />
+      <module name="zipkin_server" options="-parameters" />
+    </option>
+  </component>
+</project>

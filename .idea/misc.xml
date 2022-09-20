@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/provider_consumer_two/pom.xml" />
+        <option value="$PROJECT_DIR$/zipkin_server/pom.xml" />
+        <option value="$PROJECT_DIR$/../zipkin_parent/pom.xml" />
+        <option value="$PROJECT_DIR$/../zipkin_parent/zipkin_server/pom.xml" />
+        <option value="$PROJECT_DIR$/../untitled/pom.xml" />
+        <option value="$PROJECT_DIR$/../zipkin_component/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../BaiduNetdiskDownload/zipkin-2.23.16/zipkin-2.23.16/zipkin-collector/pom.xml" />
+        <option value="$PROJECT_DIR$/../zipkin_component/zipkin-collector/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../BaiduNetdiskDownload/zipkin-2.23.16/zipkin-2.23.16/zipkin-storage/pom.xml" />
+        <option value="$PROJECT_DIR$/../zipkin_parent/springboot2021.0.1/pom.xml" />
+        <option value="$PROJECT_DIR$/../springboot2021.0.1/pom.xml" />
+        <option value="$PROJECT_DIR$/../springboot2021.0.1/nexus/pom.xml" />
+        <option value="$PROJECT_DIR$/../sykwalking/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../BaiduNetdiskDownload/nacos-2.0.4/nacos-intergrate/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/../../../BaiduNetdiskDownload/zipkin-2.23.16/zipkin-2.23.16/zipkin-collector/activemq/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../BaiduNetdiskDownload/zipkin-2.23.16/zipkin-2.23.16/zipkin-collector/core/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../BaiduNetdiskDownload/zipkin-2.23.16/zipkin-2.23.16/zipkin-collector/kafka/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../BaiduNetdiskDownload/zipkin-2.23.16/zipkin-2.23.16/zipkin-collector/rabbitmq/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../BaiduNetdiskDownload/zipkin-2.23.16/zipkin-2.23.16/zipkin-collector/scribe/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../BaiduNetdiskDownload/zipkin-2.23.16/zipkin-2.23.16/zipkin-storage/cassandra/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../BaiduNetdiskDownload/zipkin-2.23.16/zipkin-2.23.16/zipkin-storage/elasticsearch/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../BaiduNetdiskDownload/zipkin-2.23.16/zipkin-2.23.16/zipkin-storage/mysql-v1/pom.xml" />
+        <option value="$PROJECT_DIR$/provider_consumer_three/pom.xml" />
+        <option value="$PROJECT_DIR$/../zipkin_component/zipkin-collector/activemq/pom.xml" />
+        <option value="$PROJECT_DIR$/../zipkin_component/zipkin-collector/core/pom.xml" />
+        <option value="$PROJECT_DIR$/../zipkin_component/zipkin-collector/kafka/pom.xml" />
+        <option value="$PROJECT_DIR$/../zipkin_component/zipkin-collector/pom.xml" />
+        <option value="$PROJECT_DIR$/../zipkin_component/zipkin-collector/rabbitmq/pom.xml" />
+        <option value="$PROJECT_DIR$/../zipkin_component/zipkin-collector/scribe/pom.xml" />
+        <option value="$PROJECT_DIR$/../zipkin_component/zipkin-server/pom.xml" />
+        <option value="$PROJECT_DIR$/../zipkin_component/zipkin-storage/elasticsearch/pom.xml" />
+        <option value="$PROJECT_DIR$/../zipkin_component/zipkin-storage/pom.xml" />
+        <option value="$PROJECT_DIR$/../zipkin_component/zipkin/pom.xml" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

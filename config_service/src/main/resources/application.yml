@@ -1,0 +1,28 @@
+server:
+  port: 8081
+spring:
+  rabbitmq:
+    host: localhost
+    password: guest
+    username: guest
+      #port: 15672
+      # ribbatmq
+      #rabbitmq:
+      #host: 127.0.0.1
+      #port: 5672
+      #username: guest
+      #password: guest
+      #endpoints:
+      #web:
+      #exposure:
+    #include: bus-refresh
+eureka:
+  client:
+    registerWithEureka: true # 单点的时候设置为 false 禁止注册自身
+    fetchRegistry: true # 单点的时候设置为不拉取服务注册列表数据
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8083/eureka/
+#  cloud:
+#    nacos:
+#      discovery:
+#        server-addr: 127.0.0.1:8848 #配置Nacos的服务地址
